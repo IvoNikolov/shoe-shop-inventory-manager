@@ -176,21 +176,15 @@ include_once '../includes/header.php';
 		</td>
 	</tr>
 </table>
-
-   
-<!--    Pagination links-->
     <div class="text-center">
 
         <?php
         if (!empty($_GET)) {
-            //we must unset $_GET[page] if previously built by http_build_query function
             unset($_GET['page']);
-            //to keep the query sting parameters intact while navigating to next/prev page,
             $http_query = "?" . http_build_query($_GET);
         } else {
             $http_query = "?";
         }
-        //Show pagination links
         if ($total_pages > 1) {
             echo '<ul class="pagination text-center">';
             for ($i = 1; $i <= $total_pages; $i++) {
@@ -201,9 +195,7 @@ include_once '../includes/header.php';
         }
         ?>
     </div>
-    <!--    Pagination links end-->
 
 </div>
-<!--Main container end-->
 
 <?php include_once('../includes/footer.php'); ?>
