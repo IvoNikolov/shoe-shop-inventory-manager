@@ -22,5 +22,26 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#sex').val($sexValue);
+		  $("#warehouse_form").validate({
+           rules: {
+                origin_country: {
+                    required: true,
+                    minlength: 1
+                },
+                origin_city: {
+                    required: true,
+                    minlength: 1
+                },
+                phone_number: {
+                    required: true,
+                    minlength: 1
+                },
+            },
+            messages: {
+				origin_country: "Please add country!",
+                origin_city: "Please add city!",
+                phone_number: "Please add phone number!"
+            }
+        });
 	});
 </script>
