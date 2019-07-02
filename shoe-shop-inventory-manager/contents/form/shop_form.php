@@ -23,5 +23,26 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#sex').val($sexValue);
+		 $("#shop_form").validate({
+		   rules: {
+				shop_name: {
+					required: true,
+					minlength: 1
+				},
+				shop_address: {
+					required: true,
+					minlength: 1
+				},
+				employees: {
+					required: true,
+					minlength: 1
+				},
+			},
+			messages: {
+				shop_name: "Please add shop name!",
+				shop_address: "Please add shop address!",
+				employees: "Please add employee number!"
+			}
+        });
 	});
 </script>
