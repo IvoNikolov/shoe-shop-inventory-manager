@@ -60,8 +60,7 @@ include_once '../includes/header.php';
 
 <!--Main container start-->
 <div id="page-wrapper">
-    <div class="row">
-
+    <div class="row" style="padding-top:30px;">
         <div class="col-lg-6">
             <h1 class="page-header">Log</h1>
         </div>
