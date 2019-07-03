@@ -3,11 +3,6 @@
         <label for="shoe_index">Index</label>
         <input type="text" name="shoe_index" value="<?php echo $edit ? $data['shoe_index'] : ''; ?>" placeholder="Index" class="form-control" id="shoe_index">
     </div> 
-
-	<div class="form-group">
-        <label for="brand">Brand</label>
-        <input type="text" name="brand" value="<?php echo $edit ? $data['brand'] : ''; ?>" placeholder="Brand" class="form-control" id="brand">
-    </div>
     
     <div class="form-group">
         <label>Brand</label>
