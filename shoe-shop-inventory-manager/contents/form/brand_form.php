@@ -40,7 +40,28 @@
 </fieldset>
 
 <script type="text/javascript">
-	$(document).ready(function(){
-		$('#sex').val($sexValue);
-	});
+$(document).ready(function(){
+	$("#data_form").validate({
+        rules: {
+             brand_name: {
+                 required: true,
+                 minlength: 1
+             },
+             brand_index: {
+                 required: true,
+                 minlength: 1
+             },
+			  brand: {
+                 required: true,
+                 minlength: 1
+             }
+         },
+         messages: {
+				brand_name: 'Please add name!',
+				brand_index: 'Please add index!',
+				brand: 'Please add brand!'
+         }
+     });
+});
+
 </script>
