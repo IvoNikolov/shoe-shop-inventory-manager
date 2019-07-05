@@ -58,7 +58,43 @@
 </fieldset>
 
 <script type="text/javascript">
-	$(document).ready(function(){
-		$('#sex').val($sexValue);
-	});
+$(document).ready(function(){
+	//$('#sex').val($sexValue);
+	$("#data_form").validate({
+        rules: {
+             shoe_index: {
+                 required: true,
+                 minlength: 1
+             },
+             brand: {
+                 required: true,
+                 minlength: 1
+             },
+             type: {
+                 required: true,
+                 minlength: 1
+             },
+             size: {
+                 required: true,
+                 minlength: 1
+             },
+             color: {
+                 required: true,
+                 minlength: 1
+             },
+             price: {
+                 required: true,
+                 minlength: 1
+             }
+         },
+         messages: {
+				shoe_index: 'Please add index!',
+				brand: 'Please add brand!',
+				type: 'Please add type!',
+				size: 'Please add size!',
+				color: 'Please add color!',
+				price: 'Please add price!'	
+         }
+     });
+});
 </script>
