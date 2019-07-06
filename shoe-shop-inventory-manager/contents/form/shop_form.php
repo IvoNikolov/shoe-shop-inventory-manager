@@ -22,7 +22,6 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#sex').val($sexValue);
 		 $("#shop_form").validate({
 		   rules: {
 				shop_name: {
