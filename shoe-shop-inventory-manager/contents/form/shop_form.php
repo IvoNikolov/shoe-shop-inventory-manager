@@ -11,7 +11,7 @@
     
     <div class="form-group">
         <label for="employees">Employees</label>
-        <input type="text" name="employees" value="<?php echo $edit ? $data['employees'] : ''; ?>" placeholder="Employees" class="form-control" id="employees">
+        <input type="number" min="0" name="employees" value="<?php echo $edit ? $data['employees'] : ''; ?>" placeholder="Employees" class="form-control" id="employees">
     </div>
 	
     <div class="form-group text-center">
@@ -21,27 +21,28 @@
 </fieldset>
 
 <script type="text/javascript">
-	$(document).ready(function(){
-		 $("#shop_form").validate({
-		   rules: {
-				shop_name: {
-					required: true,
-					minlength: 1
-				},
-				shop_address: {
-					required: true,
-					minlength: 1
-				},
-				employees: {
-					required: true,
-					minlength: 1
-				},
-			},
-			messages: {
-				shop_name: "Please add shop name!",
-				shop_address: "Please add shop address!",
-				employees: "Please add employee number!"
-			}
-        });
-	});
+$(document).ready(function(){
+	$("#data_form").validate({
+        rules: {
+        	shop_name: {
+                 required: true,
+                 minlength: 1
+             },
+             shop_address: {
+                 required: true,
+                 minlength: 1
+             },
+             employees: {
+                 required: true,
+                 minlength: 1
+             }
+         },
+         messages: {
+        	 shop_name: 'Please add shop name!',
+        	 shop_address: 'Please add address of shop!',
+        	 employees: 'Please add number of employees!'
+         }
+     });
+});
+
 </script>

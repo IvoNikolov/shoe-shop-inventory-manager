@@ -135,7 +135,6 @@ include_once '../includes/header.php';
 	        					<td><?php echo htmlspecialchars($row['employees']) ?></td>
 	        					<td><?php echo htmlspecialchars($row['date_added']) ?></td>
 	        					<td><?php echo htmlspecialchars($row['date_modified']) ?></td>
-	        					<td><?php echo htmlspecialchars($row['user_id']) ?></td>
 	        	                <td>
 	        					<a href="../operations/edit_data.php?data_id=<?php echo $row['id'] ?>&operation=edit&table=shop" class="btn btn-primary" style="margin-right: 8px;"><span class="glyphicon glyphicon-edit"></span>
 	        
