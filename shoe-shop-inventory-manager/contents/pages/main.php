@@ -113,6 +113,28 @@ include_once('../includes/header.php');
                 </a>
             </div>
         </div>
+		  <div class="col-lg-3 col-md-6">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fas fa-info-circle fa-5x"></i>
+						</div>
+						<div class="col-xs-9 text-right">
+							<div class="huge"><?php echo $numLog; ?></div>
+							<div>Log</div>
+						</div>
+					</div>
+				</div>
+				<a href="brand.php">
+					<div class="panel-footer">
+						<span class="pull-left">Details</span>
+						<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+						<div class="clearfix"></div>
+					</div>
+				</a>
+			</div>
+        </div>
       <?php if($_SESSION['admin_type'] == 1){ ?>
 		<div class="col-lg-3 col-md-6">
             <div class="panel panel-primary">
