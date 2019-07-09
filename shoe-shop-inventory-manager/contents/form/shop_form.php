@@ -5,8 +5,12 @@
     </div> 
 
 	<div class="form-group">
-        <label for="shop_address">Address</label>
-        <input type="text" name="shop_address" value="<?php echo $edit ? $data['shop_address'] : ''; ?>" placeholder="Address" class="form-control" id="shop_address">
+        <label>Address</label>
+        <div>
+	        <input type="text" name="shop_street" value="<?php echo $edit ? $data['shop_street'] : ''; ?>" placeholder="Street" class="form-control" id="shop_street">
+	        <input type="text" name="shop_city" value="<?php echo $edit ? $data['shop_city'] : ''; ?>" placeholder="City" class="form-control" id="shop_city">
+	        <input type="text" name="shop_country" value="<?php echo $edit ? $data['shop_country'] : ''; ?>" placeholder="Country" class="form-control" id="shop_country">   
+        </div>
     </div>
     
     <div class="form-group">
@@ -28,7 +32,15 @@ $(document).ready(function(){
                  required: true,
                  minlength: 1
              },
-             shop_address: {
+             shop_street: {
+                 required: true,
+                 minlength: 1
+             },
+             shop_city: {
+                 required: true,
+                 minlength: 1
+             },
+             shop_country: {
                  required: true,
                  minlength: 1
              },
@@ -39,7 +51,9 @@ $(document).ready(function(){
          },
          messages: {
         	 shop_name: 'Please add shop name!',
-        	 shop_address: 'Please add address of shop!',
+        	 shop_street: 'Please add street!',
+        	 shop_city: 'Please add address city!',
+        	 shop_country: 'Please add country!',        	 
         	 employees: 'Please add number of employees!'
          }
      });

@@ -26,10 +26,12 @@ if (!$order_by) {
 }
 
 $db = getDbInstance();
-$select = array('id', 'shop_name', 'shop_address', 'employees','date_added', 'date_modified');
+$select = array('id', 'shop_name', 'shop_street','shop_city','shop_country','employees','date_added', 'date_modified');
 $real_names = array('id' => '#',
 					'shop_name' => 'Name',
-					'shop_address' => 'Address',
+					'shop_steet' => 'Steet',
+					'shop_city' => 'City',
+					'shop_country' => 'Country',
 					'employees' => 'Number of Employees',
 					'date_added' => 'Family Name',
 					'date_modified' => 'Name');
@@ -131,7 +133,9 @@ include_once '../includes/header.php';
 	                        <tr>
 	                        	<td><?php echo $row['id'] ?></td>
 	        					<td><?php echo htmlspecialchars($row['shop_name']) ?></td>
-	        					<td><?php echo htmlspecialchars($row['shop_address']) ?></td>
+	        					<td><?php echo htmlspecialchars($row['shop_street']) ?>,
+        						<?php echo htmlspecialchars($row['shop_city']) ?>,
+        						<?php echo htmlspecialchars($row['shop_country']) ?></td>
 	        					<td><?php echo htmlspecialchars($row['employees']) ?></td>
 	        					<td><?php echo htmlspecialchars($row['date_added']) ?></td>
 	        					<td><?php echo htmlspecialchars($row['date_modified']) ?></td>
