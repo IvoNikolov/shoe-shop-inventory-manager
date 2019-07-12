@@ -102,6 +102,9 @@
                                 <li>
                                     <a href="../admin/users.php"><i class="fa fa-users"></i> Users</a>
                                 </li>
+								 <li>
+                                    <a href="../pages/archive.php"><i class="fas fa-file-archive"></i> Archive</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
