@@ -46,10 +46,11 @@ $(document).ready(function(){
              brand_name: {
                  required: true,
                  minlength: 1
-             },
+			},
              brand_index: {
                  required: true,
-                 minlength: 1
+                 minlength: 4,
+				 maxlenght:6
              },
 			  brand: {
                  required: true,
