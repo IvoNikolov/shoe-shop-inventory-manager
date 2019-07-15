@@ -1,12 +1,12 @@
 <fieldset>	
 	<div class="form-group">
         <label for="shipment_number">Shipment Number</label>
-        <input type="text" name="shipment_number" value="<?php echo $edit ? $data['shipment_number'] : ''; ?>" placeholder="Shipment number" class="form-control" id="shipment_number">
+        <input type="number" name="shipment_number" value="<?php echo $edit ? $data['shipment_number'] : ''; ?>" placeholder="Shipment number" class="form-control" id="shipment_number">
     </div> 
     
     <div class="form-group">
-        <label for="shipment_origin">Shipment Number</label>
-        <input type="text" name="shipment_origin" value="<?php echo $edit ? $data['shipment_origin'] : ''; ?>" placeholder="Origin country" class="form-control" id="shipment_origin">
+        <label for="shipment_origin">Shipment Origin</label>
+        <input type="number" name="shipment_origin" value="<?php echo $edit ? $data['shipment_origin'] : ''; ?>" placeholder="Origin country" class="form-control" id="shipment_origin">
     </div> 
 
     <div class="form-group text-center">
