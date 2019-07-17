@@ -2,6 +2,14 @@
 session_start();
 require_once '../../config/config.php';
 include_once('../includes/auth_validate.php');
+
+	if (isset($_POST['import'])) {
+    	echo "Import";
+    }
+    elseif (isset($_POST['export'])) {
+    	echo "Export";
+    }
+
 include_once '../includes/header.php';
 ?>
 
@@ -13,8 +21,8 @@ include_once '../includes/header.php';
     </div>
 	<div class="row">
         <div class="col-lg-6">
-            <button class="btn btn-info"> Import</button>
-            <button class="btn btn-danger"> Export</button>
+            <button class="btn btn-info" type="submit" name="import" value="Import"> Import</button>
+            <button class="btn btn-danger" type="submit" name="export" value="Export"> Export</button>
         </div>
     </div>
 </div>
