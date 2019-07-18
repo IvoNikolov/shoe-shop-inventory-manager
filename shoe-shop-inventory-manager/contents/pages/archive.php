@@ -3,10 +3,11 @@ session_start();
 require_once '../../config/config.php';
 include_once('../includes/auth_validate.php');
 
-	if (isset($_POST['import'])) {
+    if (isset($_POST['import'])) {
     	echo "Import";
     }
-    elseif (isset($_POST['export'])) {
+    
+    if (isset($_POST['export'])) { 
     	echo "Export";
     }
 
@@ -19,13 +20,20 @@ include_once '../includes/header.php';
             <h1 class="page-header">Archive</h1>
         </div>
     </div>
-	<div class="row">
+    <form class="form" action="" method="post"  id="archive_form" enctype="multipart/form-data">
+    <fieldset>
+    <div class="form-group">
+    <div class="row">
         <div class="col-lg-6">
-            <button class="btn btn-info" type="submit" name="import" value="Import"> Import</button>
-            <button class="btn btn-danger" type="submit" name="export" value="Export"> Export</button>
+        	<div class="form-group">
+            	<button class="btn btn-info" type="submit" name="import" value="import"> Import</button>
+            	<button class="btn btn-danger" type="submit" name="export" value="export"> Export</button>
+            </div>
         </div>
     </div>
+    </div>
+     </fieldset>
+     </form>
 </div>
-
 
 <?php include_once('../includes/footer.php'); ?>
