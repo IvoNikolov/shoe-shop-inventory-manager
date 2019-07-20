@@ -85,6 +85,22 @@ include_once '../includes/header.php';
     </div>
     <form class="form" action="" method="post"  id="archive_form" enctype="multipart/form-data">
     <fieldset>
+	<div class="row">
+    		<div class="col-lg-4">
+			    <div class="form-group">
+			        <label>Available Databases</label>
+			            <select name="database" id="database" class="form-control selectpicker" >
+			                <?php
+			                foreach ($fileList as $value) {
+			                    $sel = "selected";
+			                    echo '<option value="'.$value.'"' . $sel . '>' . $value . '</option>';
+			                }
+			    
+			                ?>
+			            </select>
+    			</div>
+    		</div>
+    	</div>
     <div class="form-group">
     <div class="row">
         <div class="col-lg-6">
