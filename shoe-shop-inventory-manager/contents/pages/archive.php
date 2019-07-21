@@ -115,4 +115,22 @@ include_once '../includes/header.php';
      </form>
 </div>
 
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("#archive_form").validate({
+		rules:{
+		  database: {
+          	required: true,
+            minlength: 1
+		  }
+		},
+		  messages: {
+			database: "Choose database!"
+		}
+	});
+	
+});
+</script>
+
 <?php include_once('../includes/footer.php'); ?>
