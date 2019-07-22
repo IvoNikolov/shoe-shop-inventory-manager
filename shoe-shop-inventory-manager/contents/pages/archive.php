@@ -4,7 +4,44 @@ require_once '../../config/config.php';
 include_once('../includes/auth_validate.php');
 
     if (isset($_POST['import'])) {
-    	echo "Import";
+    	$data = filter_input_array(INPUT_POST);    
+
+		$DB_HOST=DB_HOST;
+		$DB_USER=DB_USER;
+		$DB_PASS=DB_PASSWORD;
+		$DB_NAME=DB_NAME;
+
+		$mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+		$mysqli ->set_charset("utf8");
+		$mysqli->query('SET foreign_key_checks = 0');
+		if ($result = $mysqli->query("SHOW TABLES"))
+		{
+			while($row = $result->fetch_array(MYSQLI_NUM))
+			{
+				$mysqli->query('DROP TABLE IF EXISTS '.$row[0]);
+				$row[0].",\n";
+			}
+		}
+		$mysqli->query('SET foreign_key_checks = 1');
+
+		$filename = $data['database'];
+		$op_data = '';
+		$lines = file($filename);
+		foreach ($lines as $line)
+		{
+			if (substr($line, 0, 2) == '--' || $line == '')
+			{
+				continue;
+			}
+			$op_data .= $line;
+			if (substr(trim($line), -1, 1) == ';')
+			{
+				$mysqli->query($op_data);
+				$op_data = '';
+			}
+		}
+		
+		$mysqli->close();
     }
     
     if (isset($_POST['export'])) { 
