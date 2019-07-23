@@ -142,8 +142,10 @@ include_once '../includes/header.php';
     <div class="row">
         <div class="col-lg-6">
         	<div class="form-group">
-            	<button class="btn btn-info" type="submit" name="import" value="import"> Import</button>
-            	<button class="btn btn-danger" type="submit" name="export" value="export"> Export</button>
+            	<button class="btn btn-info" type="submit" name="import" value="import"> Import database</button>
+            	<button class="btn btn-danger" type="submit" name="export" value="export"> Export database</button>
+				 <button class="btn btn-success" type="submit" name="nullify" value="nullify"> Nullify tables</button>
+
             </div>
         </div>
     </div>
