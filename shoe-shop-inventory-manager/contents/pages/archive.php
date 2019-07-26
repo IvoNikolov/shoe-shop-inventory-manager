@@ -111,8 +111,23 @@ include_once('../includes/auth_validate.php');
 		}   
     }
 	
-	if(isset($_POST['nullify'])) 
-		echo 'nullify';
+	if(isset($_POST['nullify'])) {
+		
+		$DB_HOST=DB_HOST;
+	    $DB_USER=DB_USER;
+	    $DB_PASS=DB_PASSWORD;
+	    $DB_NAME=DB_NAME;
+	    
+	    $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+	    
+	    $sql_bales = "DELETE FROM merchandise";
+	    $sql_shipments = "DELETE FROM shipments";
+	    
+	    
+	    $mysqli->query($sql_bales);
+	    $mysqli->query($sql_shipments);
+	    
+	    $mysqli->close();
 	}
 
 include_once '../includes/header.php';
