@@ -128,6 +128,10 @@ include_once('../includes/auth_validate.php');
 	    $mysqli->query($sql_shipments);
 	    
 	    $mysqli->close();
+		
+		echo '<script language="javascript">';
+		echo 'alert("Database has been nullified successfully!")';
+		echo '</script>';
 	}
 
 include_once '../includes/header.php';
