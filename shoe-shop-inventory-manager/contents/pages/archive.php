@@ -42,6 +42,10 @@ include_once('../includes/auth_validate.php');
 		}
 		
 		$mysqli->close();
+		echo '<script language="javascript">';
+		echo 'alert("Database '.$backup_file_name.' is imported successfully!")';
+		echo '</script>';
+		header("Refresh:0");
     }
     
     if (isset($_POST['export'])) { 
