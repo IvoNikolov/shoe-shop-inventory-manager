@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time:  6 май 2019 в 17:04
+-- Generation Time: 31 юли 2019 в 20:32
 -- Версия на сървъра: 5.7.17-log
 -- PHP Version: 7.3.2
 
@@ -64,10 +64,28 @@ CREATE TABLE `log` (
 --
 
 INSERT INTO `log` (`id`, `data_log`, `date_added`, `user_id`) VALUES
-(1, 'edit_brand', '2019-05-05 14:05:29', NULL),
-(2, 'add_origin', '2019-05-05 15:10:09', 'Tim89'),
-(3, 'add_origin', '2019-05-05 15:11:42', 'Tim89'),
-(4, 'add_origin', '2019-05-05 15:12:12', 'Tim89');
+(1, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(2, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(3, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(4, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(5, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(6, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(7, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(8, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(9, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(10, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(11, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(12, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(13, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(14, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(15, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(16, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(17, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(18, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(19, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(20, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(21, 'edit_shop', '2019-07-09 15:33:18', 'Ivan'),
+(22, 'add_merchandise', '2019-07-10 16:07:14', 'Ivan');
 
 -- --------------------------------------------------------
 
@@ -93,13 +111,15 @@ CREATE TABLE `merchandise` (
 --
 
 INSERT INTO `merchandise` (`id`, `shoe_index`, `brand`, `type`, `sex`, `size`, `color`, `price`, `date_added`, `date_modified`) VALUES
-(2, 'Tr323', 'Nike', 'Casual', 'Female', 42, 'blue', '22', '2019-04-21 16:39:23', '0000-00-00 00:00:00'),
-(3, 'LC3232', 'UMBRO', 'Casual', 'Male', 34, 'red', '23', '2019-04-21 16:33:08', '2019-04-21 15:59:37'),
-(4, '3000', 'RET1000', 'Sport', 'Male', 34, 'red', '23', '2019-04-21 16:33:47', '2019-04-20 15:18:22'),
-(5, '3000', 'Puma', 'Casual', 'Male', 34, 'red', '23', '2019-04-21 16:45:11', '2019-04-20 15:19:42'),
-(6, '3000', 'RET1000', 'Casual', 'Male', 34, 'blue', '23', '2019-04-21 16:43:41', '2019-04-20 17:40:11'),
-(7, 'INDEX1', 'Addidas', 'Casual', 'female', 34, 'red', '48.30', '2019-04-23 17:42:26', '2019-04-23 17:42:26'),
-(8, 'Test2', 'XXXX', 'Casual', 'male', 34, 'red', '22', '2019-04-23 19:39:23', '2019-04-23 19:39:23');
+(2, 'Tr323', '1', 'Casual', 'Female', 42, 'blue', '22', '2019-04-21 16:39:23', '0000-00-00 00:00:00'),
+(3, 'LC3232', '1', 'Casual', 'Male', 34, 'red', '23', '2019-04-21 16:33:08', '2019-04-21 15:59:37'),
+(4, '3000', '2', 'Sport', 'Male', 34, 'red', '23', '2019-04-21 16:33:47', '2019-04-20 15:18:22'),
+(5, '3000', '3', 'Casual', 'Male', 34, 'red', '23', '2019-04-21 16:45:11', '2019-04-20 15:19:42'),
+(6, '3000', '1', 'Casual', 'Male', 34, 'blue', '23', '2019-04-21 16:43:41', '2019-04-20 17:40:11'),
+(7, 'INDEX1', '1', 'Casual', 'female', 34, 'red', '48.30', '2019-04-23 17:42:26', '2019-04-23 17:42:26'),
+(8, 'Test2', '2', 'Casual', 'male', 34, 'red', '22', '2019-04-23 19:39:23', '2019-04-23 19:39:23'),
+(9, 'LC3232', '3', 'Sport', 'male', 35, 'red', '50.00', '2019-07-03 16:39:45', '2019-07-03 16:39:45'),
+(10, '3000', '1', 'Casual', 'male', 39, 'blue', '50.00', '2019-07-10 16:07:14', '2019-07-10 16:07:14');
 
 -- --------------------------------------------------------
 
@@ -128,17 +148,39 @@ INSERT INTO `origin` (`id`, `origin_country`, `origin_city`, `phone_number`, `da
 -- --------------------------------------------------------
 
 --
+-- Структура на таблица `shipment`
+--
+
+CREATE TABLE `shipment` (
+  `id` int(255) NOT NULL,
+  `shipment_number` int(255) NOT NULL,
+  `shipment_origin` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Структура на таблица `shop`
 --
 
 CREATE TABLE `shop` (
   `id` int(11) NOT NULL,
   `shop_name` varchar(255) DEFAULT NULL,
-  `shop_address` varchar(255) DEFAULT NULL,
+  `shop_street` varchar(255) DEFAULT NULL,
+  `shop_city` varchar(255) DEFAULT NULL,
+  `shop_country` varchar(255) DEFAULT NULL,
   `employees` int(11) DEFAULT NULL,
   `date_added` timestamp NULL DEFAULT NULL,
   `date_modified` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Схема на данните от таблица `shop`
+--
+
+INSERT INTO `shop` (`id`, `shop_name`, `shop_street`, `shop_city`, `shop_country`, `employees`, `date_added`, `date_modified`) VALUES
+(1, 'Shoe Shop Sofia', 'Kiril Mladenov 5', 'Varna', 'Bulgaria', 1, '2019-07-07 08:30:22', '2019-07-09 15:33:18'),
+(2, 'Shoe Shop Jimbo', 'Stefan Popov 3', 'Sofia', 'Bulgaria', 5, '2019-07-09 15:27:32', '2019-07-09 15:27:32');
 
 -- --------------------------------------------------------
 
@@ -251,6 +293,12 @@ ALTER TABLE `origin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `shipment`
+--
+ALTER TABLE `shipment`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `shop`
 --
 ALTER TABLE `shop`
@@ -288,13 +336,13 @@ ALTER TABLE `brand`
 -- AUTO_INCREMENT for table `log`
 --
 ALTER TABLE `log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `merchandise`
 --
 ALTER TABLE `merchandise`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `origin`
@@ -303,10 +351,16 @@ ALTER TABLE `origin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `shipment`
+--
+ALTER TABLE `shipment`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `shop`
 --
 ALTER TABLE `shop`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `test_table`
