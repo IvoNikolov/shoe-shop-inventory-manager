@@ -5,6 +5,8 @@ Languages: JavaScript, PHP
 
 Database: MySql
 
+MySQLi wrapper: https://github.com/ThingEngineer/PHP-MySQLi-Database-Class
+
 Visual Libraries: bootstrap
 
 JS Libraries: jquery
