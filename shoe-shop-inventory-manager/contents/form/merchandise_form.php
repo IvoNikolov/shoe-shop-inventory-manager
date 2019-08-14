@@ -38,7 +38,7 @@
 
 	<div class="form-group">
         <label for="size">Size</label>
-        <input type="text" name="size" value="<?php echo $edit ? $data['size'] : ''; ?>" placeholder="Size" class="form-control" id="size">
+        <input type="text" name="size" onkeypress="return((event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)" value="<?php echo $edit ? $data['size'] : ''; ?>" placeholder="Size" class="form-control" id="size">
     </div>
     
     <div class="form-group">
