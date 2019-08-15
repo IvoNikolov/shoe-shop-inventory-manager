@@ -48,7 +48,7 @@
     
     <div class="form-group">
         <label for="price">Price</label>
-        <input type="text" name="price" value="<?php echo $edit ? $data['price'] : ''; ?>" placeholder="Price" class="form-control" id="price">
+        <input type="text" name="price" onkeypress="return((event.charCode >= 48 && event.charCode <= 57) || event.charCode == 46)" value="<?php echo $edit ? $data['price'] : ''; ?>" placeholder="Price" class="form-control" id="price">
     </div>
 	
     <div class="form-group text-center">
