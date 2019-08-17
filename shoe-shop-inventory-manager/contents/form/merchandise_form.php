@@ -43,7 +43,7 @@
     
     <div class="form-group">
         <label for="color">Color</label>
-        <input type="text" name="color" value="<?php echo $edit ? $data['color'] : ''; ?>" placeholder="Color" class="form-control" id="color">
+        <input type="text" name="color" onkeypress="return((event.charCode >= 97 && event.charCode <= 122) || event.charCode == 32)" value="<?php echo $edit ? $data['color'] : ''; ?>" placeholder="Color" class="form-control" id="color">
     </div>
     
     <div class="form-group">
