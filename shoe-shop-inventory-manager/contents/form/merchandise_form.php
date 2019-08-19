@@ -25,7 +25,7 @@
     
     <div class="form-group">
         <label for="type">Type</label>
-        <input type="text" name="type" value="<?php echo $edit ? $data['type'] : ''; ?>" placeholder="Type" class="form-control" id="type">
+        <input type="text" name="type" onkeypress="return((event.charCode >= 97 && event.charCode <= 122) || event.charCode == 32)" value="<?php echo $edit ? $data['type'] : ''; ?>" placeholder="Type" class="form-control" id="type">
     </div>
   	<div class="form-group">
         <label for="sex">Sex</label>
