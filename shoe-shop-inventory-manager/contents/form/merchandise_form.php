@@ -59,7 +59,20 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
-	//$('#sex').val($sexValue);
+	var availableTags = [
+      "black",
+      "green",
+	  "grey",
+      "red",
+	  "yellow",
+	  "brown",
+	  "blue",
+      "white"
+    ];
+	
+	$( "#color" ).autocomplete({
+      source: availableTags
+    });
 	$("#data_form").validate({
         rules: {
              shoe_index: {

@@ -16,7 +16,10 @@
         <link href="../../fonts/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 		<script defer src="../../fonts/font-awesome/js/all.js"></script>
         <script src="../../js/jquery.min.js" type="text/javascript"></script> 
-
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="/resources/demos/style.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     </head>
     <body>
     	<div id="wrapper">
