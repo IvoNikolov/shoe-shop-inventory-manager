@@ -67,7 +67,10 @@ $(document).ready(function(){
 	  "yellow",
 	  "brown",
 	  "blue",
-      "white"
+      "white",
+	  "purple",
+	  "pink",
+	  "orange"
     ];
 	
 	$( "#color" ).autocomplete({
