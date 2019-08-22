@@ -70,7 +70,10 @@ $(document).ready(function(){
       "white",
 	  "purple",
 	  "pink",
-	  "orange"
+	  "orange",
+	  "almond",
+	  "aqua",
+	  "azure",
     ];
 	
 	$( "#color" ).autocomplete({
